@@ -5,22 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,60
+    0;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/positivo.css">
     <title>Colegio Positivo</title>
 </head>
 <body>
-    <header>
+    <header class="cabecalho">
         <img src="ico/favicon.ico" alt="Logo do Colegio Positivo">
-            <h1>Colegio Positivo</h1>
+            <h1 class="titulo">Colégio Positivo</h1>
     </header>
-    <main>
-        <section>
-            <h2>Media escolar</h2>
-            <p>Situação do aluno, nota acima de 7.0 ( Aprovado ).</p>
-            <p>Nota entre 5.0 e 7.0 ( Recuperação ).</p>
-            <p>Nota abaixo de 5.0 ( Reprovado ).</p>
+    <main class="conteudo">
+        <section class="infors">
+            <h2 class="sub-titulo">Média escolar</h2>
+            <p>Nota acima de 7.0  <strong >Aprovado</strong> .</p>
+            <p>Nota entre 5.0 e 7.0 <strong>Recuperação</strong> .</p>
+            <p>Nota abaixo de 5.0  <strong>Reprovado</strong> .</p>
         </section>
         <section>
-            
+            <table>
+                <thead>
+                    <th>Nome</th>
+                    <th>Primeira nota</th>
+                    <th>Segunda nota</th>
+                    <th>Terceira nota</th>
+                    <th>Quarta nota</th>
+                    <th>Média</th>
+                    <th>Situação</th>
+                </thead>
+                <tbody id="tabela-alunos">
+                    <tr class="alunos">
+                        <td class="info-nome">Alexandre Rcs</td>
+                        <td class="info-primeira-nota">10</td>
+                        <td class="info-segunda-nota">10</td>
+                        <td class="info-terceira-nota">10</td>
+                        <td class="info-quarta-nota">10</td>
+                        <td class="info-media"></td>
+                        <td class="info-situacao"></td>
+                    </tr>
+                    <tr class="alunos">
+                        <td class="info-nome">Ana carolina</td>
+                        <td class="info-primeira-nota">7.8</td>
+                        <td class="info-segunda-nota">7.6</td>
+                        <td class="info-terceira-nota">5.9</td>
+                        <td class="info-quarta-nota">8.5</td>
+                        <td class="info-media"></td>
+                        <td class="info-situacao"></td>
+                    </tr>
+                    <tr class="alunos">
+                        <td class="info-nome">Carlos rosck</td>
+                        <td class="info-primeira-nota">5.9</td>
+                        <td class="info-segunda-nota">8.5</td>
+                        <td class="info-terceira-nota">1.9</td>
+                        <td class="info-quarta-nota">2.5</td>
+                        <td class="info-media"></td>
+                        <td class="info-situacao"></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
     </main>
