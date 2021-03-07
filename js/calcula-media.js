@@ -2,9 +2,12 @@
 var alunos = document.querySelectorAll('.alunos');
 
 adicionaMedia(alunos);
-
+console.log(alunos)
 function adicionaMedia(alunos){
+
+    
     alunos.forEach(function(aluno){
+        
         var media = calculaMedia(aluno);
         var tdMedia = aluno.querySelector('.info-media');
         tdMedia.textContent = media.toFixed(1);
@@ -22,7 +25,6 @@ function adicionaMedia(alunos){
         
     });
 }
-
 
 function calculaMedia(aluno){
     var notas = aluno.querySelectorAll('.info-nota');
