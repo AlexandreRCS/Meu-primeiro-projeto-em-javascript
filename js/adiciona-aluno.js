@@ -5,17 +5,20 @@ var tabela = document.querySelector('#tabela-alunos');
 adicionar.addEventListener("click", function(event){
     event.preventDefault();
     var formulario = document.querySelector('.adiciona-aluno');
-    var alunoForm = obterDadosDoFormulario(formulario);
-    var alunoTr = montaTr(alunoForm);
-    tabela.appendChild(alunoTr);
-    formulario.reset();
-    var aluno = [alunoTr];
-    adicionaMedia(aluno);
-    console.log(aluno);
+    
+    if(validaForm(formulario)){
+        var alunoForm = obterDadosDoFormulario(formulario);
+        var alunoTr = montaTr(alunoForm);
+        tabela.appendChild(alunoTr);
+        formulario.reset();
+        var aluno = [alunoTr];
+        adicionaMedia(aluno);
+    }
 })
 
 
 function obterDadosDoFormulario(form){
+
     var aluno = {
         nome: form.nome.value,
         primeiraNota: form.primeira.value,
@@ -26,6 +29,7 @@ function obterDadosDoFormulario(form){
         situacao: '',
     }
     return aluno;
+    
     
 }
 

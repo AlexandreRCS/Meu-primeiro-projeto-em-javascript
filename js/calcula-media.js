@@ -2,7 +2,6 @@
 var alunos = document.querySelectorAll('.alunos');
 
 adicionaMedia(alunos);
-console.log(alunos)
 function adicionaMedia(alunos){
 
     
