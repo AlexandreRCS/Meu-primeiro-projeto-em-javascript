@@ -38,7 +38,3 @@ function calculaMedia(aluno){
 
 
 
-function adicionaSituacao(nota){
-  
-}
-

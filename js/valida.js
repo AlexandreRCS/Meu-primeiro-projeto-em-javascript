@@ -3,23 +3,48 @@ function validaForm(form){
     if(form.nome.value.length > 3 && form.nome.value.length <= 15 ){
         var nota = validaNotas([form.querySelectorAll('.nota')]);
         if(nota == 0){
+            var msg = 'Aluno adicionado com sucesso !!!';
+            mesagensDeErro(msg,1)
             valida = true;
+        }else{
+            var msg = 'A nota deve está entre 1 e 10!'
+            mesagensDeErro(msg,0);
         }
+    }else{
+        var msg = 'O nome deve está entre 3 e 15 caracteres'
+        mesagensDeErro(msg,0)
+
     }
-    console.log(valida);
     return valida;
 }
 
 function validaNotas(notas){
-    console.log(notas[0][0].value.length)
     var erro = 0;
     notas[0].forEach(function(nota){
         if(nota.value <= 0 || nota.value > 10 ){
-            erro += 1;
+             erro += 1;
         }
     })
-    console.log(erro)
 
     return erro;
+
+}
+
+function mesagensDeErro(text,zeroMsgDeErroUmDeSucesso ){
+    var ul = document.querySelector('#mensagem-de-erro');
+    ul.innerHTML = ''
+    var li = document.createElement('li');
+    if(zeroMsgDeErroUmDeSucesso === 0){
+        li.classList.add('notas-erro');
+    }else{
+        li.classList.add('notas-certas');
+    }
+    li.textContent += text;
+    
+    ul.appendChild(li);
+    return ul
+}
+
+function mensagensDeSucesso(text){
 
 }

@@ -145,6 +145,20 @@ body{
     color: var(--corFonteDestaque);
 }
 
+.notas-erro{
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+    list-style: none;
+}
+
+.notas-certas{
+    color: green;
+    font-weight: bold;
+    padding: 5px;
+    list-style: none;
+}
+
 
 footer{
     text-align: center;

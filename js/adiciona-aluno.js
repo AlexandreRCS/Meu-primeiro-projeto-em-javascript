@@ -5,7 +5,6 @@ var tabela = document.querySelector('#tabela-alunos');
 adicionar.addEventListener("click", function(event){
     event.preventDefault();
     var formulario = document.querySelector('.adiciona-aluno');
-    
     if(validaForm(formulario)){
         var alunoForm = obterDadosDoFormulario(formulario);
         var alunoTr = montaTr(alunoForm);
@@ -13,6 +12,8 @@ adicionar.addEventListener("click", function(event){
         formulario.reset();
         var aluno = [alunoTr];
         adicionaMedia(aluno);
+    }else{
+        formulario.reset();
     }
 })
 
@@ -28,17 +29,9 @@ function obterDadosDoFormulario(form){
         media: '',
         situacao: '',
     }
-    return aluno;
-    
+    return aluno; 
     
 }
-
-function calculaMediaForm(notas){
-    notas.forEach(function(media){
-        
-    });
-}
-
 
 function montaTr(conteudo){
     var alunoTr = document.createElement('tr');
