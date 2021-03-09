@@ -1,6 +1,6 @@
 function validaForm(form){
     var valida = false;
-    if(form.nome.value.length > 3 && form.nome.value.length <= 15 ){
+    if(form.nome.value.length >=3 && form.nome.value.length <= 15 ){
         var nota = validaNotas([form.querySelectorAll('.nota')]);
         if(nota == 0){
             var msg = 'Aluno adicionado com sucesso !!!';
