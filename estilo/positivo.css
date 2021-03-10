@@ -159,6 +159,10 @@ body{
     list-style: none;
 }
 
+.seleciona-aluno{
+    background-color: blanchedalmond;
+}
+
 
 footer{
     text-align: center;
