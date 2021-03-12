@@ -4,15 +4,15 @@ function validaForm(form){
         var nota = validaNotas([form.querySelectorAll('.nota')]);
         if(nota == 0){
             var msg = 'Aluno adicionado com sucesso !!!';
-            mesagensDeErro(msg,1)
+            mesagensDeErro(msg,"#mensagem-de-erro",1)
             valida = true;
         }else{
             var msg = 'A nota deve está entre 1 e 10!'
-            mesagensDeErro(msg,0);
+            mesagensDeErro(msg,"#mensagem-de-erro",0);
         }
     }else{
         var msg = 'O nome deve está entre 3 e 15 caracteres'
-        mesagensDeErro(msg,0)
+        mesagensDeErro(msg,'#mensagem-de-erro',0)
 
     }
     return valida;
@@ -30,8 +30,8 @@ function validaNotas(notas){
 
 }
 
-function mesagensDeErro(text,zeroMsgDeErroUmDeSucesso ){
-    var ul = document.querySelector('#mensagem-de-erro');
+function mesagensDeErro(text,id,zeroMsgDeErroUmDeSucesso ){
+    var ul = document.querySelector(id);
     ul.innerHTML = ''
     var li = document.createElement('li');
     if(zeroMsgDeErroUmDeSucesso === 0){

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo/positivo.css">
+    <link rel="stylesheet" href="estilo/tabela.css">
     <title>Colegio Positivo</title>
 </head>
 <body>
@@ -25,7 +26,9 @@
                 
             </section>
             <section class="filtra">
-                <button class="lixeira"><img src="imagens/bin_icon-icons.com_53677.ico" alt="lixeira" ></button>
+                <button class="selecionar excluir">Selecionar</button>
+                <button  class="lixeira invisivel"><img src="imagens/bin_icon-icons.com_53677.ico" alt="lixeira" ></button>
+                <button class="invisivel sair">Sair</button>
             </section>
             <section>
                 
@@ -41,7 +44,7 @@
                             <th>Situação</th>
                         </tr>
                     </thead>
-                    <tbody id="tabela-alunos">
+                    <tbody id="tabela-alunos" class="excluir">
                         <tr class="alunos">
                             <td class="info-nome">Osvaldo</td>
                             <td class="info-nota">10</td>
@@ -113,5 +116,7 @@
     <script src="js/adiciona-aluno.js"></script>
     <script src="js/valida.js"></script>
     <script src="js/remove.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </body>
 </html>
