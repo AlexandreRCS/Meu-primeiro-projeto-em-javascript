@@ -1,19 +1,24 @@
 function validaForm(form){
     var valida = false;
-    if(form.nome.value.length >=3 && form.nome.value.length <= 15 ){
-        var nota = validaNotas([form.querySelectorAll('.nota')]);
-        if(nota == 0){
-            var msg = 'Aluno adicionado com sucesso !!!';
-            mesagensDeErro(msg,"#mensagem-de-erro",1)
-            valida = true;
-        }else{
-            var msg = 'A nota deve está entre 1 e 10!'
-            mesagensDeErro(msg,"#mensagem-de-erro",0);
-        }
-    }else{
-        var msg = 'O nome deve está entre 3 e 15 caracteres'
+    nome = form.nome.value;
+    if(nome > 0 || nome < 0 ){
+        var msg = 'Por favor!! digite somente letras';
         mesagensDeErro(msg,'#mensagem-de-erro',0)
-
+    }else{
+        if(form.nome.value.length >=3 && form.nome.value.length <= 15){
+            var nota = validaNotas([form.querySelectorAll('.nota')]);
+            if(nota == 0){
+                var msg = 'Aluno adicionado com sucesso !!!';
+                mesagensDeErro(msg,"#mensagem-de-erro",1)
+                valida = true;
+            }else{
+                var msg = 'A nota deve está entre 1 e 10!'
+                mesagensDeErro(msg,"#mensagem-de-erro",0);
+            }
+        }else{
+            var msg = 'O nome deve está entre 3 e 15 caracteres'
+            mesagensDeErro(msg,'#mensagem-de-erro',0)
+        }
     }
     return valida;
 }

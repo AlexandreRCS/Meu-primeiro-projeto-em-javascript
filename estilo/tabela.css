@@ -1,21 +1,20 @@
 .filtra{
     max-width: 940px;
-    min-width: 610px;
+    min-width: 640px;
 }
 
 .lixeira > img{
-    width: 50px;
+    width: 40px;
 }
 .lixeira{
-   border-radius: 6px;
-   margin: 20px;
-   position: relative;
-   left: 70%;
+    border-radius: 6px;
+    position: relative;
+    left: 70%;
+    vertical-align: middle;
 }
 
 .lixeira:hover{
     cursor: pointer;
-    border-color: red;
 }
 
 .selecionar{
@@ -59,6 +58,7 @@
 .tabela-seleciona{
     cursor: pointer;
 }
+
 
 .tabela > thead{
     background-color: lightgrey;
@@ -147,5 +147,7 @@
 }
 
 .seleciona-aluno{
-    background-color: blanchedalmond;
+    background-color: rgb(255, 215, 205);
 }
+
+
