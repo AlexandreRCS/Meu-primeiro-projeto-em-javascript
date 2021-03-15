@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo/positivo.css">
     <link rel="stylesheet" href="estilo/tabela.css">
+    <link rel="stylesheet" href="remove-filtra-aluno.css">
     <title>Colegio Positivo</title>
 </head>
 <body>
@@ -25,13 +26,14 @@
                 <p>Nota abaixo de 5.0  <strong>Reprovado</strong> .</p>
                 
             </section>
-            <section class="filtra">
-                <button class="selecionar excluir">Selecionar</button>
+            <section >
+                <button class="selecionar excluir">Remover alunos</button>
                 <button  class="lixeira invisivel"><img src="imagens/bin_icon-icons.com_53677.ico" alt="lixeira" ></button>
                 <button class="invisivel sair">Sair</button>
+                <label for="filtra"  class="filtra-aluno">Buscar aluno</label>
+                <input type="search" name="filtra" id="filtra" class="filtra-aluno" placeholder="Digite o nome do aluno">
             </section>
             <section>
-                
                 <table class="tabela">
                     <thead>
                         <tr>
@@ -117,6 +119,7 @@
     <script src="js/valida.js"></script>
     <script src="js/remove.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/filtra.js"></script>
 
 </body>
 </html>
