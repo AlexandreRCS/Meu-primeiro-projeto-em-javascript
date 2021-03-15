@@ -1,6 +1,4 @@
 var filtra = document.querySelector('#filtra');
-var alunos =  document.querySelectorAll('.alunos'); 
-
 
 filtra.addEventListener('input', function(){
     var classe =  document.querySelectorAll('.alunos'); 
@@ -14,7 +12,6 @@ filtra.addEventListener('input', function(){
                 aluno.classList.remove('fadeOut');
             }
         });
-        
     }else{
         alunos.forEach(function(aluno){
             aluno.classList.remove('fadeOut')
