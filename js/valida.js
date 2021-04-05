@@ -1,7 +1,7 @@
 function validaForm(form){
     var valida = false;
     nome = form.nome.value;
-    if(nome > 0 || nome < 0 ){
+    if(!validaNome(nome)){
         var msg = 'Por favor!! digite somente letras';
         mesagensDeErro(msg,'#mensagem-de-erro',0)
     }else{
@@ -51,6 +51,10 @@ function mesagensDeErro(text,id,zeroMsgDeErroUmDeSucesso ){
 }
 
 
-function validaNome(){
-    const valida = 
+function validaNome(teste){
+    const valida = /^[a-zA-zãõ]+\s?[a-zA-Zãõ]+?$/
+    return valida.test(teste)
+    
 }
+
+
