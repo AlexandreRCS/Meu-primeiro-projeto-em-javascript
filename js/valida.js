@@ -50,6 +50,7 @@ function mesagensDeErro(text,id,zeroMsgDeErroUmDeSucesso ){
     return ul
 }
 
-function mensagensDeSucesso(text){
 
+function validaNome(){
+    const valida = 
 }
