@@ -1,5 +1,4 @@
 function validaForm(form){
-    var valida = false;
     nome = form.nome.value;
     if(!validaNome(nome)){
         var msg = 'Por favor!! digite somente letras';
