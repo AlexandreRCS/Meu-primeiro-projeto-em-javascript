@@ -1,4 +1,5 @@
 function validaForm(form){
+    var valida = false
     nome = form.nome.value;
     if(!validaNome(nome)){
         var msg = 'Por favor!! digite somente letras';
@@ -19,7 +20,7 @@ function validaForm(form){
             mesagensDeErro(msg,'#mensagem-de-erro',0)
         }
     }
-    return valida;
+    return valida
 }
 
 function validaNotas(notas){
